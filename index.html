@@ -1,44 +1,107 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Android技术博客 by fg2q1q3q</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Android技术博客</h1>
-      <h2 class="project-tagline">Barry.Github.io</h2>
-    </section>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery+html5烂漫爱心表白动画 - 站长素材</title>
 
-    <section class="main-content">
-      <h1>
-<a id="android优秀技术文章" class="anchor" href="#android%E5%B0%81%E8%A3%85%E5%BA%93%E4%BD%BF%E7%94%A8%E8%AE%B2%E8%A7%A3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>android优秀技术文章</h1>
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
 
-<hr>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
 
-<p><a  href="https://yq.aliyun.com/articles/43">极致的 Hybrid 混合式开发（去啊App Hybrid 实战）</a></p>
+</head>
 
-<!--PC版-->
-<div id="SOHUCS" sid="github"></div>
-<script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*2013—02-14,</span><br />
+			<span class="space"/><span class="comments">*2013-02-28.</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Boy name = <span class="keyword">Mr</span> LI<br />
+			Girl name = <span class="keyword">Mrs</span> ZHANG<br />
+			<span class="comments">// Fall in love river. </span><br />
+			The boy love the girl;<br />
+			<span class="comments">// They love each other.</span><br />
+			The girl loved the boy;<br />
+			<span class="comments">// AS time goes on.</span><br />
+			The boy can not be separated the girl;<br />
+			<span class="comments">// At the same time.</span><br />
+			The girl can not be separated the boy;<br />
+			<span class="comments">// Both wind and snow all over the sky.</span><br />
+			<span class="comments">// Whether on foot or 5 kilometers.</span><br />
+			<span class="keyword">The boy</span> very <span class="keyword">happy</span>;<br />
+			<span class="keyword">The girl</span> is also very <span class="keyword">happy</span>;<br />
+			<span class="placeholder"/><span class="comments">// Whether it is right now</span><br />
+			<span class="placeholder"/><span class="comments">// Still in the distant future.</span><br />
+			<span class="placeholder"/>The boy has but one dream;<br />
+			<span class="comments">// The boy wants the girl could well have been happy.</span><br />
+			<br>
+			<br>
+			I want to say:<br />
+			Baby, I love you forever;<br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					亲爱的，这是我们相爱在一起的时光。
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					爱你直到永永远远。<br/>
+					<div class="signature">- 李先生</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <script type="text/javascript">
-window.changyan.api.config({
-appid: 'cysulsrXm',
-conf: 'prod_25a74cfaef27a38756f10e6867739e43'
-});
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2013, 2, 28);
+together.setHours(20);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
 </script>
-      <footer class="site-footer">
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages1</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
-  </body>
+<div style="text-align:center;clear:both">
+<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
 </html>
