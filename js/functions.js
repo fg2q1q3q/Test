@@ -18,8 +18,8 @@ $(function () {
 	
 	$("#content").css("width", $loveHeart.width() + $("#code").width());
 	$("#content").css("height", Math.max($loveHeart.height(), $("#code").height()));
-	$("#content").css("margin-top", Math.max(($window.height() - $("#content").height()) / 2, 10));
-	$("#content").css("margin-left", Math.max(($window.width() - $("#content").width()) / 2, 10));
+	$("#content").css("margin-top", Math.max(($window.height() - $("#content").height()) / 2, 7));
+	$("#content").css("margin-left", Math.max(($window.width() - $("#content").width()) / 2, 7));
 
     // renderLoop
     setInterval(function () {
@@ -86,7 +86,7 @@ function startHeartAnimation() {
 				if (progress >= str.length) {
 					clearInterval(timer);
 				}
-			}, 75);
+			}, 145);
 		});
 		return this;
 	};
@@ -110,7 +110,7 @@ function timeElapse(date){
 	if (seconds < 10) {
 		seconds = "0" + seconds;
 	}
-	var result = "<span class=\"digit\">" + 天 + "</span> days <span class=\"digit\">" + 时 + "</span> hours <span class=\"digit\">" + 分 + "</span> minutes <span class=\"digit\">" + 秒 + "</span> seconds"; 
+	var result = "<span class=\"digit\">" + days + "</span> 天 <span class=\"digit\">" + hours + "</span> 时 <span class=\"digit\">" + minutes + "</span> 分 <span class=\"digit\">" + seconds + "</span> 秒"; 
 	$("#elapseClock").html(result);
 }
 
