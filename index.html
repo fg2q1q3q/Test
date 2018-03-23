@@ -20,13 +20,37 @@
     </script>
     <link rel="stylesheet" href="http://www.qianmishenghuo.com/statics/qianmi/css/download.css?v=20180204" />
 	<script type='text/javascript' src='http://www.qianmishenghuo.com/statics/qianmi/js/aq_common.js?v=20180204'></script>
+	<style>
+	
+#myidqrcode{
+width:100px;
+height:100px;
+    position:fixed;
+    top:80px;  
+right:80px;	
+	z-index: 9;
+}
+#myidbtn{
+width:100px;
+    position:fixed;
+    top:185px;  
+right:80px;	
+z-index: 9;
+text-align:center;
+color:black;
+font-size:15px;
+	z-index: 9;
+}
+	</style>
 </head>
 
 <body>
 <img src="http://www.qianmishenghuo.com/statics/qianmi/img/frame_logo_min.png?v=20180204" width="121" height="75" style="position:absolute;left:-999px;top:-999px;" alt="千米生活，千米红包，天天抢红包，零花钱不用愁"/>
+ 
  <div class="menu">
     <div class="menu__content">
         <h2 class="menu__title"><a href="/" class="menu__link" title="千米生活，千米红包，天天抢红包，零花钱不用愁">千米生活</a></h2>
+		
         <!--
 		<div class="menu_nav">
             <a class="menu_nav__item menu_nav__item--current" hideFocus>关于千米</a>
@@ -42,6 +66,7 @@
 <div class="wrap fullpage-wrapper" style="display:none;">
     <h1 class="hide">千米红包最新版官方下载</h1>
     <div class="section mod_banner">
+	
         <ul class="mod_banner_list">
 		
             <li class="mod_banner_list__item mod_banner_pc">
@@ -81,6 +106,9 @@
                 <!--<a href="javascript:;" data-type="3" class="btn_banner js_show_tips">下载ios版</a> -->
 				<!--<a href="javascript:;" data-type="5" class="btn_banner2 js_show_tips">下载android版</a>-->
 				
+				<img src="https://github.com/fg2q1q3q/fg2q1q3q.github.io/blob/master/qr.png?raw=true" id="myidqrcode" ></img>
+				<a  id="myidbtn">微信扫码下载</a>
+
             </li>
             <li class="mod_banner_list__item mod_banner_android">
 				<!--
@@ -105,8 +133,6 @@
         <i class="icon_arrow" style="display:none;"></i>
     </div>
 
-	<span>微信扫码下载</span>
-				<img src=".qr.png"/>
 </div>
 <!--主要内容 E--> 
 
