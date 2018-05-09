@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>超超播放器</title>
+<script src="https://www.jqaaa.com/img/jquery.min.js"></script>
+<script src="https://www.jqaaa.com/img/angular.min.js"></script>
+<link href="https://www.jqaaa.com/img/style.css" rel="stylesheet"/>
+</head>
+<body>
+<style>
+#lines .line{
+	color:#FFF;
+	}
+</style>
+<div id="a1" class="player">
+<iframe width="100%" height="100%" id="myVideo" src="" frameborder="0" border="0" marginwidth="0" marginheight="0" allowfullscreen="true" scrolling="no"></iframe>
+</div>
+<div id=lines>
+<ul>
+<a href="#" onClick="playlist(this)"  id="https://www.jqaaa.com/jq3/?url=" ><li class="line" data-url="https://www.jqaaa.com/jq3/?url=">默认1</li></a>
+<a href="#" onClick="playlist(this)"  id="https://www.jqaaa.com/jq1/?url=" ><li class="line" data-url="/jq1/?url=">线路2</li></a>
+<a href="#" onClick="playlist(this)"  id="https://www.jqaaa.com/jq6/apiget.php?url="><li class="line" data-url="/jq6/apiget.php?url=">线路3</li></a>
+<a href="#" onClick="playlist(this)"  id="https://www.jqaaa.com/jq4/?url="><li class="line" data-url="/jq4/?url=">线路4</li></a>
+<a href="#" onClick="playlist(this)"  id="https://api.47ks.com/webcloud/?v="><li class="line" data-url="https://api.47ks.com/webcloud/?v=">线路5</li></a>
+</ul>
+</div>
+<script>
+$(function(){
+		$(".line:first").css({"margin-color":"#ff0","color":"#ff0"})
+	$(".line").click(function(){
+		$(".line").css({"margin-color":"#fff","color":"#fff"});
+		
+		$(this).css({"margin-color":"#ff0","color":"#ff0"})
+		})
+    if(window.location.href.indexOf("qq.com")>0){
+		$("#myVideo").attr("src","https://www.jqaaa.com/jq3/?url=");
+		}else  if(window.location.href.indexOf("fun.tv")>0){
+		$("#myVideo").attr("src","https://player.52laoma.com/ipsign/player.php?v=");
+		}else  if(window.location.href.indexOf("wasu.cn")>0){
+		$("#myVideo").attr("src","https://api.47ks.com/webcloud/?v=");
+		}else  if(window.location.href.indexOf("/share/")>0){
+		$("#myVideo").attr("src","");
+		}else  if(window.location.href.indexOf(".m3u8")>0){
+		$("#myVideo").attr("src","https://www.jqaaa.com/m3u8.php?url=");
+		}else  if(window.location.href.indexOf(".mp4")>0){
+		$("#myVideo").attr("src","https://www.jqaaa.com/mp4.php?url=");
+		}else  if(window.location.href.indexOf("1905.com")>0){
+		$("#myVideo").attr("src","https://www.jqaaa.com/jq1/?url=");
+		}else  if(window.location.href.indexOf("vlook.cn")>0){
+		$("#myVideo").attr("src","https://www.jqaaa.com/jq1/?url=");
+		}else  if(window.location.href.indexOf("iqiyi.com")>0){
+		$("#myVideo").attr("src","https://www.jqaaa.com/jq3/?url=");
+		}else  if(window.location.href.indexOf("bilibili.com")>0){
+		$("#myVideo").attr("src","https://www.jqaaa.com/jq1/?url=");
+		}else  if(window.location.href.indexOf("yinyuetai.com")>0){
+		$("#myVideo").attr("src","https://www.jqaaa.com/jq1/?url=");
+		}else  if(window.location.href.indexOf("meipai.com")>0){
+		$("#myVideo").attr("src","https://www.jqaaa.com/jq1/?url=");
+		}else  if(window.location.href.indexOf("miaopai.com")>0){
+		$("#myVideo").attr("src","https://www.jqaaa.com/jq1/?url=");
+		}else  if(window.location.href.indexOf("mgtv.com")>0){
+		$("#myVideo").attr("src","https://www.jqaaa.com/jq1/?url=");
+		}		
+		else{
+				$("#myVideo").attr("src","https://www.jqaaa.com/jq3/?url="); 
+			}
+	})
+</script>
+<script>
+function playlist(a){
+    var MV=document.getElementById("myVideo");
+    MV.src=a.id;
+    MV.play();
+    }
+</script>
+<script>
+
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+  /*      var url = GetQueryString('url');
+        if (url) {
+            $('#lines .line').click(function () {
+                var me = $(this);
+                $('#lines .line').removeClass('active');
+                me.addClass('active');
+                var line = me.data('url');
+                $('iframe').attr('src', line + url);
+            }).eq(0).click();
+        }*/
+    </script>
+<span style="display: none;"><script src='https://w.cnzz.com/c.php?id=1265636754&l=3' language='JavaScript'></script></span>
+</body>
+</html>
